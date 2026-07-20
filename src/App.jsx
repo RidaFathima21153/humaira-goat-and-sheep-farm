@@ -1,3 +1,4 @@
+// Humaira Goat & Sheep Farm - Main React Application (Vercel Ready)
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
