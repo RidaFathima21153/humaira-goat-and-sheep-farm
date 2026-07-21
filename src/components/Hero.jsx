@@ -1,9 +1,10 @@
 import React from 'react';
-import { Phone, MessageCircle, Navigation, ShieldCheck, Clock, Award, ChevronDown } from 'lucide-react';
+import { Phone, MessageCircle, Navigation, ShieldCheck, Clock, Award, ChevronDown, User } from 'lucide-react';
 import { openFarmDirections } from '../utils/navigation';
 
-const PHONE_NUMBER = "+919876543210";
-const WHATSAPP_LINK = "https://wa.me/919876543210?text=" + encodeURIComponent("Hello Humaira Goat & Sheep Farm, I want to inquire about visiting your farm and purchasing healthy livestock.");
+const PHONE_NUMBER = "+91 98452 73714";
+const RAW_PHONE = "919845273714";
+const WHATSAPP_LINK = `https://wa.me/${RAW_PHONE}?text=` + encodeURIComponent("Hello Syed Zulfikhar (Humaira Goat & Sheep Farm), I want to inquire about visiting your farm and purchasing healthy livestock.");
 
 export default function Hero() {
   return (
@@ -29,7 +30,7 @@ export default function Hero() {
             {/* Pill Tag */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-pill border border-white/20 text-farm-accentGreen text-xs sm:text-sm font-semibold tracking-wide uppercase shadow-lg">
               <Award className="w-4 h-4 text-farm-skyBlue" />
-              <span>Premium & Certified Livestock Farm</span>
+              <span>Managed by Syed Zulfikhar • Certified Farm</span>
             </div>
 
             {/* Title */}
@@ -43,17 +44,17 @@ export default function Hero() {
             </p>
 
             <p className="text-sm sm:text-base text-slate-300 max-w-xl leading-relaxed">
-              Experience our modern elevated livestock facility featuring hygienic wooden slatted flooring, clean running water, and 100% organic natural feed. Open for individual buyers & bulk festival orders.
+              Founded and managed by <strong>Syed Zulfikhar</strong>. Experience our modern elevated livestock facility featuring hygienic wooden slatted flooring, clean running water, and 100% organic natural feed.
             </p>
 
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-4 pt-4">
               <a
-                href={`tel:${PHONE_NUMBER}`}
+                href={`tel:${RAW_PHONE}`}
                 className="px-7 py-4 rounded-2xl bg-white text-farm-darkGreen font-bold text-base shadow-xl hover:bg-farm-beige hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 group"
               >
                 <Phone className="w-5 h-5 text-farm-emerald group-hover:rotate-12 transition-transform" />
-                <span>Call Now</span>
+                <span>Call {PHONE_NUMBER}</span>
               </a>
 
               <a
@@ -87,8 +88,8 @@ export default function Hero() {
                 <span className="text-xs sm:text-sm font-medium text-slate-200">Hygienic Shed</span>
               </div>
               <div className="flex items-center gap-2">
-                <Award className="w-5 h-5 text-yellow-400 flex-shrink-0" />
-                <span className="text-xs sm:text-sm font-medium text-slate-200">Top Breeds</span>
+                <User className="w-5 h-5 text-yellow-400 flex-shrink-0" />
+                <span className="text-xs sm:text-sm font-medium text-slate-200">Owner Managed</span>
               </div>
             </div>
 
@@ -104,12 +105,16 @@ export default function Hero() {
                   🐐
                 </div>
                 <div>
-                  <h3 className="font-heading font-bold text-lg text-white">Visit Our Farm Today</h3>
-                  <p className="text-xs text-farm-accentGreen">Direct from Farm to Customer</p>
+                  <h3 className="font-heading font-bold text-lg text-white">Syed Zulfikhar</h3>
+                  <p className="text-xs text-farm-accentGreen">Owner & Farm Director</p>
                 </div>
               </div>
 
               <div className="space-y-3 text-sm text-slate-200">
+                <div className="p-3 rounded-xl bg-white/10 flex items-center justify-between">
+                  <span className="text-slate-300">Direct Contact</span>
+                  <span className="font-semibold text-farm-accentGreen">{PHONE_NUMBER}</span>
+                </div>
                 <div className="p-3 rounded-xl bg-white/10 flex items-center justify-between">
                   <span className="text-slate-300">Environment</span>
                   <span className="font-semibold text-farm-skyBlue">Elevated Slatted Shed</span>
@@ -117,10 +122,6 @@ export default function Hero() {
                 <div className="p-3 rounded-xl bg-white/10 flex items-center justify-between">
                   <span className="text-slate-300">Feed Type</span>
                   <span className="font-semibold text-farm-accentGreen">100% Organic Green & Dry</span>
-                </div>
-                <div className="p-3 rounded-xl bg-white/10 flex items-center justify-between">
-                  <span className="text-slate-300">Veterinary Care</span>
-                  <span className="font-semibold text-yellow-300">Regular Doctor Inspection</span>
                 </div>
               </div>
 

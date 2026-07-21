@@ -1,7 +1,8 @@
 import React from 'react';
 import { MessageCircle, CheckCircle, ArrowUpRight } from 'lucide-react';
 
-const WHATSAPP_BASE = "https://wa.me/919876543210?text=";
+const RAW_PHONE = "919845273714";
+const WHATSAPP_BASE = `https://wa.me/${RAW_PHONE}?text=`;
 
 export default function OurAnimals() {
   const animals = [
@@ -11,7 +12,7 @@ export default function OurAnimals() {
       image: '/images/baby-goats.png',
       description: 'Healthy, playful, and adorable young kids raised on high-nutrient mother milk and fresh green grass. Ideal for hand rearing and home farms.',
       features: ['Age: 2 - 5 Months', 'Vaccinated & Active', 'Playful Temperament'],
-      query: 'Hello Humaira Farm, I am interested in inquiring about Baby Goats (Kids).'
+      query: 'Hello Syed Zulfikhar (Humaira Farm), I am interested in inquiring about Baby Goats (Kids).'
     },
     {
       title: 'Male Goats (Bucks)',
@@ -19,7 +20,7 @@ export default function OurAnimals() {
       image: '/images/male-goat.png',
       description: 'Robust, heavy-weight male goats with magnificent build and strong genetics. Perfect for breeding stud duty and Qurbani requirements.',
       features: ['Strong Horns & Frame', 'High Meat Yield', 'Certified Breeder Stud'],
-      query: 'Hello Humaira Farm, I am interested in inquiring about Male Goats (Bucks).'
+      query: 'Hello Syed Zulfikhar (Humaira Farm), I am interested in inquiring about Male Goats (Bucks).'
     },
     {
       title: 'Playful & Active Goats',
@@ -27,7 +28,7 @@ export default function OurAnimals() {
       image: '/images/playing-goats.png',
       description: 'Energetic goats given daily exercise in open farm fields for superior muscle growth and natural immune strength.',
       features: ['Daily Open Yard Exercise', 'High Immunity', 'Naturally Fed'],
-      query: 'Hello Humaira Farm, I am interested in inquiring about your active courtyard Goats.'
+      query: 'Hello Syed Zulfikhar (Humaira Farm), I am interested in inquiring about your active courtyard Goats.'
     },
     {
       title: 'Premium Sheep Breeds',
@@ -35,7 +36,7 @@ export default function OurAnimals() {
       image: '/images/shed-interior.png',
       description: 'Clean, well-groomed sheep housed in elevated hygienic sheds. Raised on balanced grains for soft wool coat and optimal weight.',
       features: ['Dense Coat & Build', 'Quiet Temperament', 'Elevated Shed Raised'],
-      query: 'Hello Humaira Farm, I am interested in inquiring about Premium Sheep.'
+      query: 'Hello Syed Zulfikhar (Humaira Farm), I am interested in inquiring about Premium Sheep.'
     },
     {
       title: 'Female Goats (Does)',
@@ -43,7 +44,7 @@ export default function OurAnimals() {
       image: '/images/male-goat.png',
       description: 'Healthy female goats with excellent milking capacity and strong maternal instinct. Prime choice for starting a commercial goat unit.',
       features: ['Proven Milking Line', 'Regular Kidding History', 'High Fertility'],
-      query: 'Hello Humaira Farm, I am interested in inquiring about Female Goats (Does).'
+      query: 'Hello Syed Zulfikhar (Humaira Farm), I am interested in inquiring about Female Goats (Does).'
     },
     {
       title: 'Breeding Stock Units',
@@ -51,7 +52,7 @@ export default function OurAnimals() {
       image: '/images/hero-entrance.png',
       description: 'Specially selected male and female breeding pairs curated for farmers looking to establish high-yield goat and sheep breeding units.',
       features: ['Genetically Screened', 'Vaccination Record Included', 'Farm Setup Guidance'],
-      query: 'Hello Humaira Farm, I am interested in inquiring about Breeding Stock Pairs.'
+      query: 'Hello Syed Zulfikhar (Humaira Farm), I am interested in inquiring about Breeding Stock Pairs.'
     },
   ];
 
@@ -70,7 +71,7 @@ export default function OurAnimals() {
             </h2>
           </div>
           <p className="text-slate-600 max-w-md text-sm sm:text-base">
-            Every animal at Humaira Farm is individually monitored, vaccinated, and raised in elevated hygienic sheds to guarantee prime health and quality.
+            Every animal at Humaira Farm is individually monitored, vaccinated, and raised in elevated hygienic sheds under the direct supervision of owner Syed Zulfikhar.
           </p>
         </div>
 

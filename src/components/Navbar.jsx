@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, MessageCircle, Menu, X, MapPin, ShieldCheck, Clock, Navigation } from 'lucide-react';
+import { Phone, MessageCircle, Menu, X, MapPin, ShieldCheck, Clock, Navigation, User } from 'lucide-react';
 import { MAPS_FARM_LINK, openFarmDirections } from '../utils/navigation';
 
-const PHONE_NUMBER = "+919876543210";
-const WHATSAPP_LINK = "https://wa.me/919876543210?text=" + encodeURIComponent("Hello Humaira Goat & Sheep Farm, I would like to inquire about your goats and sheep.");
+const PHONE_NUMBER = "+91 98452 73714";
+const RAW_PHONE = "919845273714";
+const WHATSAPP_LINK = `https://wa.me/${RAW_PHONE}?text=` + encodeURIComponent("Hello Syed Zulfikhar (Humaira Goat & Sheep Farm), I would like to inquire about your goats and sheep.");
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -40,18 +41,18 @@ export default function Navbar() {
             </span>
             <span className="hidden md:inline-block text-slate-400">|</span>
             <span className="hidden md:flex items-center gap-1 text-slate-200">
-              <ShieldCheck className="w-3.5 h-3.5 text-farm-skyBlue" /> 100% Hygienic & Healthy Livestock
+              <User className="w-3.5 h-3.5 text-yellow-400" /> Owner: Syed Zulfikhar
             </span>
           </div>
           <div className="flex items-center space-x-4">
-            <a href={`tel:${PHONE_NUMBER}`} className="hover:text-farm-accentGreen transition flex items-center gap-1 font-medium">
+            <a href={`tel:${RAW_PHONE}`} className="hover:text-farm-accentGreen transition flex items-center gap-1 font-medium">
               <Phone className="w-3 h-3" /> Call: {PHONE_NUMBER}
             </a>
             <button
               onClick={openFarmDirections}
               className="hover:text-farm-skyBlue transition flex items-center gap-1 text-farm-paleBeige font-medium cursor-pointer"
             >
-              <Navigation className="w-3 h-3 text-farm-skyBlue animate-pulse" /> Get Directions from My Location
+              <Navigation className="w-3 h-3 text-farm-skyBlue animate-pulse" /> Get Directions
             </button>
           </div>
         </div>
@@ -100,7 +101,7 @@ export default function Navbar() {
               <span>Directions</span>
             </button>
             <a
-              href={`tel:${PHONE_NUMBER}`}
+              href={`tel:${RAW_PHONE}`}
               className="px-4 py-2 rounded-xl text-sm font-semibold text-farm-darkGreen border border-farm-emerald/30 hover:bg-farm-emerald hover:text-white transition-all shadow-sm flex items-center gap-2"
             >
               <Phone className="w-4 h-4" />
@@ -141,12 +142,12 @@ export default function Navbar() {
               </a>
             ))}
             <div className="pt-4 border-t border-slate-200 grid grid-cols-2 gap-2">
-              <button
-                onClick={() => { setMobileMenuOpen(false); openFarmDirections(); }}
-                className="py-2.5 px-4 rounded-xl text-center font-semibold text-white bg-farm-darkBlue flex items-center justify-center gap-2 text-sm"
+              <a
+                href={`tel:${RAW_PHONE}`}
+                className="py-2.5 px-4 rounded-xl text-center font-semibold text-farm-darkGreen bg-slate-100 flex items-center justify-center gap-2 text-sm"
               >
-                <Navigation className="w-4 h-4 text-farm-skyBlue" /> Get Directions
-              </button>
+                <Phone className="w-4 h-4" /> Call
+              </a>
               <a
                 href={WHATSAPP_LINK}
                 target="_blank"

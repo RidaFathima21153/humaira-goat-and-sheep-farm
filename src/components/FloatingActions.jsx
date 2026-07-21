@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, MessageCircle, ArrowUp } from 'lucide-react';
 
-const PHONE_NUMBER = "+919876543210";
-const WHATSAPP_LINK = "https://wa.me/919876543210?text=" + encodeURIComponent("Hello Humaira Goat & Sheep Farm, I am contacting you directly from your website.");
+const RAW_PHONE = "919845273714";
+const WHATSAPP_LINK = `https://wa.me/${RAW_PHONE}?text=` + encodeURIComponent("Hello Syed Zulfikhar (Humaira Goat & Sheep Farm), I am contacting you directly from your website.");
 
 export default function FloatingActions() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -35,9 +35,10 @@ export default function FloatingActions() {
 
       {/* Floating Call Button */}
       <a
-        href={`tel:${PHONE_NUMBER}`}
+        href={`tel:${RAW_PHONE}`}
         className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-farm-darkGreen text-white shadow-2xl hover:scale-110 transition-all duration-300 flex items-center justify-center border-2 border-farm-accentGreen/50 group"
-        aria-label="Call Humaira Farm"
+        aria-label="Call Syed Zulfikhar"
+        title="Call Owner: Syed Zulfikhar (+91 98452 73714)"
       >
         <Phone className="w-6 h-6 text-farm-accentGreen group-hover:rotate-12 transition-transform" />
       </a>
@@ -48,7 +49,8 @@ export default function FloatingActions() {
         target="_blank"
         rel="noopener noreferrer"
         className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-500 text-white shadow-2xl animate-pulse-glow hover:scale-110 transition-all duration-300 flex items-center justify-center border-2 border-white group"
-        aria-label="Chat on WhatsApp"
+        aria-label="Chat with Syed Zulfikhar on WhatsApp"
+        title="WhatsApp Syed Zulfikhar (+91 98452 73714)"
       >
         <MessageCircle className="w-8 h-8 fill-white stroke-emerald-500 group-hover:scale-110 transition-transform" />
       </a>

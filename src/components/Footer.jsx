@@ -1,9 +1,10 @@
 import React from 'react';
-import { Phone, MessageCircle, MapPin, Navigation, ShieldCheck, Heart } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Navigation, ShieldCheck, Heart, User } from 'lucide-react';
 
 const MAPS_URL = "https://maps.app.goo.gl/HX2aG73nJd8pCFsb9";
-const PHONE_NUMBER = "+919876543210";
-const WHATSAPP_LINK = "https://wa.me/919876543210?text=" + encodeURIComponent("Hello Humaira Goat & Sheep Farm, I am inquiring from your website footer.");
+const PHONE_NUMBER = "+91 98452 73714";
+const RAW_PHONE = "919845273714";
+const WHATSAPP_LINK = `https://wa.me/${RAW_PHONE}?text=` + encodeURIComponent("Hello Syed Zulfikhar (Humaira Goat & Sheep Farm), I am inquiring from your website footer.");
 
 export default function Footer() {
   const quickLinks = [
@@ -52,14 +53,15 @@ export default function Footer() {
             </div>
 
             <p className="text-slate-300 text-sm leading-relaxed max-w-sm">
-              Healthy goats and sheep raised with care, quality & trust. Modern elevated slatted wooden shed infrastructure, 100% natural organic feed, and 24/7 dedicated care.
+              Healthy goats and sheep raised with care, quality & trust. Owned and managed by <strong>Syed Zulfikhar</strong> with modern elevated slatted wooden shed infrastructure, 100% natural organic feed, and 24/7 care.
             </p>
 
             <div className="flex items-center space-x-3 pt-2">
               <a
-                href={`tel:${PHONE_NUMBER}`}
+                href={`tel:${RAW_PHONE}`}
                 className="w-10 h-10 rounded-xl bg-white/10 hover:bg-farm-emerald flex items-center justify-center text-white transition"
-                aria-label="Call"
+                aria-label="Call Syed Zulfikhar"
+                title="Call Syed Zulfikhar (+91 98452 73714)"
               >
                 <Phone className="w-4 h-4" />
               </a>
@@ -68,7 +70,8 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-xl bg-emerald-600 hover:bg-emerald-500 flex items-center justify-center text-white transition"
-                aria-label="WhatsApp"
+                aria-label="WhatsApp Syed Zulfikhar"
+                title="WhatsApp Syed Zulfikhar (+91 98452 73714)"
               >
                 <MessageCircle className="w-4 h-4" />
               </a>
@@ -119,28 +122,40 @@ export default function Footer() {
           {/* Location & Contact Details */}
           <div className="lg:col-span-3 space-y-4">
             <h4 className="font-heading font-bold text-lg text-farm-accentGreen uppercase tracking-wider text-xs">
-              Contact Details & Maps
+              Contact & Owner Details
             </h4>
 
             <div className="space-y-3 text-sm text-slate-300">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
+              <div className="flex items-center gap-3">
+                <User className="w-5 h-5 text-yellow-400 flex-shrink-0" />
                 <div>
-                  <span className="font-semibold text-white block">Farm Location</span>
-                  <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="text-xs text-farm-skyBlue underline hover:text-white transition">
-                    Click here for Google Maps Navigation
-                  </a>
+                  <span className="text-xs text-slate-400 block">Owner / Director</span>
+                  <span className="font-bold text-white">Syed Zulfikhar</span>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-farm-accentGreen flex-shrink-0" />
-                <span>Call: {PHONE_NUMBER}</span>
+                <a href={`tel:${RAW_PHONE}`} className="hover:text-white transition">
+                  {PHONE_NUMBER}
+                </a>
               </div>
 
               <div className="flex items-center gap-3">
                 <MessageCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                <span>WhatsApp: {PHONE_NUMBER}</span>
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+                  WhatsApp: {PHONE_NUMBER}
+                </a>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
+                <div>
+                  <span className="font-semibold text-white block">Farm Location</span>
+                  <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="text-xs text-farm-skyBlue underline hover:text-white transition">
+                    Google Maps Directions ➔
+                  </a>
+                </div>
               </div>
 
               <div className="pt-2">
@@ -155,7 +170,7 @@ export default function Footer() {
 
         {/* Copyright Notice */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4 text-center sm:text-left">
-          <p>© {new Date().getFullYear()} Humaira Goat & Sheep Farm. All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} Humaira Goat & Sheep Farm • Managed by Syed Zulfikhar. All Rights Reserved.</p>
           <p className="flex items-center justify-center gap-1">
             <span>Built with care for healthy livestock & community trust</span>
             <Heart className="w-3.5 h-3.5 text-red-400 fill-red-400 inline" />
